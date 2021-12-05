@@ -1,0 +1,17 @@
+2021-09-30 20:24:53,672 -- ERROR -- Msg from error
+2021-09-30 20:24:53,674 -- CRITICAL -- Msg from critical
+2021-09-30 20:24:53,674 -- CRITICAL -- -----------------------------
+2021-09-30 20:24:53,674 -- DEBUG -- Value of i is 16
+2021-09-30 20:24:53,674 -- DEBUG -- Msg from debug
+2021-09-30 20:24:53,674 -- INFO -- Msg from info
+2021-09-30 20:24:53,674 -- WARNING -- Msg from warning
+2021-09-30 20:24:53,674 -- ERROR -- Msg from error
+2021-09-30 20:24:53,674 -- CRITICAL -- Msg from critical
+2021-09-30 20:24:53,674 -- CRITICAL -- -----------------------------
+2021-09-30 20:24:53,674 -- DEBUG -- Value of i is 17
+2021-09-30 20:24:53,674 -- DEBUG -- Msg from debug
+2021-09-30 20:24:53,674 -- INFO -- Msg from info
+2021-09-30 20:24:53,674 -- WARNING -- Msg from warning
+2021-09-30 20:24:53,675 -- ERROR -- Msg from error
+2021-09-30 20:24:53,675 -- CRITICAL -- Msg from critical
+2021-09-30 20:24:53,675 -- CRITICAL -- -----------------------------

@@ -1,0 +1,8 @@
+DEBUG 2021-10-02 14:25:44,660 test no:- 18 started
+DEBUG 2021-10-02 14:25:44,665 test no:- 18 ednded 
+DEBUG 2021-10-02 14:25:44,665 test no:- 19 started
+DEBUG 2021-10-02 14:25:44,675 test no:- 19 ednded 
+INFO 2021-10-07 19:44:35,144 AnonymousUser
+INFO 2021-10-07 19:44:35,244 <bound method HttpRequest.build_absolute_uri of <WSGIRequest: GET '/homepage/'>>
+INFO 2021-10-07 19:44:59,882 AnonymousUser
+INFO 2021-10-07 19:45:01,758 AnonymousUser

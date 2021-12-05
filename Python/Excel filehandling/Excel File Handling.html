@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>1&period; Excel file handling cheat sheet</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="1-excel-file-handling-cheat-sheet">1. Excel file handling cheat sheet</h1>
+<ul>
+<li><a href="#1-excel-file-handling-cheat-sheet">1. Excel file handling cheat sheet</a>
+<ul>
+<li><a href="#101-writting-data-in-sheet-">1.0.1. <strong>Writting data in sheet:-</strong></a></li>
+<li><a href="#102-saving-sheet-to-the-excel-file">1.0.2. <strong>Saving sheet to the excel file:</strong></a></li>
+<li><a href="#103-try-catch-for-risky-code">1.0.3. <strong>Try catch for risky code</strong></a></li>
+<li><a href="#104-for-reading-data-from-excel-sheet">1.0.4. <strong>For reading data from excel sheet</strong></a></li>
+</ul>
+</li>
+</ul>
+<p>Import modules</p>
+<pre><code class="language-python"><div><span class="hljs-keyword">import</span> openpyxl <span class="hljs-keyword">as</span> xcl
+
+</div></code></pre>
+<hr>
+<h3 id="101-writting-data-in-sheet-">1.0.1. <strong>Writting data in sheet:-</strong></h3>
+<p>Create a workbook i.e excel file</p>
+<pre><code class="language-python"><div>wb =  openpyxl.workbook()
+</div></code></pre>
+<p>Create sheet to store data in it</p>
+<pre><code class="language-python"><div>sheet = wb.active
+</div></code></pre>
+<ol>
+<li>First methode</li>
+</ol>
+<pre><code class="language-python"><div>sheet[<span class="hljs-string">&quot;A1&quot;</span>] = <span class="hljs-string">&#x27;ABC&#x27;</span>
+</div></code></pre>
+<ol start="2">
+<li>Second methode</li>
+</ol>
+<pre><code class="language-python"><div>sheet.cell(row, column).value = <span class="hljs-string">&#x27;abc&#x27;</span>
+</div></code></pre>
+<h3 id="102-saving-sheet-to-the-excel-file">1.0.2. <strong>Saving sheet to the excel file:</strong></h3>
+<ol>
+<li>select the path</li>
+</ol>
+<pre><code class="language-python"><div>FILE_PATH = <span class="hljs-string">r&quot;f:\This \is \the \file \path \with \r&quot;</span> 
+
+FILE_PATH = <span class="hljs-string">&quot;f:\\This \\is \\escape \\ characters\\ sequence.&quot;</span>
+</div></code></pre>
+<ol start="2">
+<li>save sheet using command</li>
+</ol>
+<pre><code class="language-python"><div>wb.save(FILE_PATH)
+</div></code></pre>
+<hr>
+<h3 id="103-try-catch-for-risky-code">1.0.3. <strong>Try catch for risky code</strong></h3>
+<pre><code class="language-python"><div><span class="hljs-keyword">try</span>:
+    wb.save(FILE_PATH)
+<span class="hljs-keyword">except</span> PermissionError:
+    print(<span class="hljs-string">&#x27;Pleas close the file!!&#x27;</span>)
+</div></code></pre>
+<hr>
+<h3 id="104-for-reading-data-from-excel-sheet">1.0.4. <strong>For reading data from excel sheet</strong></h3>
+<pre><code class="language-python"><div>FILE_PATH = <span class="hljs-string">&#x27;From where you want to read data&#x27;</span>
+</div></code></pre>
+<p>Loading workbook</p>
+<pre><code class="language-python"><div>wb = xcl.load_workbook(FILE_PATH)
+</div></code></pre>
+<p>Activating sheet</p>
+<pre><code class="language-python"><div>sheet = wb.active
+</div></code></pre>
+<p>Reading cell value</p>
+<pre><code class="language-python"><div>print(sheet.cell(row,column).value)
+</div></code></pre>
+
+    </body>
+    </html>

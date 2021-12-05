@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs Board Homepage</title>
+</head>
+<body>
+    <h2>Welcome to the Jobs board</h2>
+    {% for job in jobs %}
+        <div>
+            {{forloop.counter}}
+            <a href="{% url 'jobs_details' job.id %}">{{job.title}} at {{job.company}}</a>
+            <p>
+               Technology stack: {{ job.details }}
+            </p>
+            ----------------------------
+        </div>
+    {% endfor %}
+</body>
+</html>
